@@ -15,16 +15,10 @@ public class DoorMovementScript : MonoBehaviour
         UpdatePosition();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            UpdatePosition();
-        }
-    }
+ 
+    
 
-    private void UpdatePosition()
+    public void UpdatePosition()
     {
         if(isDoorOpen)
         {
