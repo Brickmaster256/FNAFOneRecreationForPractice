@@ -7,6 +7,8 @@ public class BonnieMovement : MonoBehaviour
 {
     public Transform[] cameraPositions;
     [SerializeField] private int waitTime = 5000;
+    [SerializeField] private int aIValue = 10;
+
     private int timeWaited = 0;
     private int currentCameraIndex;
     private NavMeshAgent agent;
@@ -27,7 +29,7 @@ public class BonnieMovement : MonoBehaviour
         if(agent.remainingDistance <= agent.stoppingDistance)
         {
             timeWaited++;
-            Debug.Log(timeWaited);
+            
             
         }
         else 
@@ -38,8 +40,15 @@ public class BonnieMovement : MonoBehaviour
         if (timeWaited >= waitTime)
         {
             timeWaited = 0;
-            MoveCharacter();
-            Debug.Log("Time to Move");
+            int moveChance = Random.Range(0, 20);
+            if (aIValue >= moveChance)
+            {
+                
+                MoveCharacter();
+                Debug.Log("Time to Move");
+            }
+            Debug.Log(moveChance);
+            
         }
 
 
@@ -49,10 +58,7 @@ public class BonnieMovement : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            for (int time = 0; time < waitTime; time++)
-            {
-                Debug.Log("Bonnie Waiting");
-            }
+            
 
             currentCameraIndex = (currentCameraIndex + 1) % cameraPositions.Length;
 
