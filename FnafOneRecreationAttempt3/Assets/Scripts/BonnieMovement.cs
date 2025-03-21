@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class BonnieMovement : MonoBehaviour
 {
     public Transform[] cameraPositions;
-    [SerializeField] private float waitTime = 4.98f;
+    [SerializeField] private int waitTime = 5000;
+    private int timeWaited = 0;
     private int currentCameraIndex;
     private NavMeshAgent agent;
     // Start is called before the first frame update
@@ -23,19 +24,45 @@ public class BonnieMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       StartCoroutine(MovementTiming());
+        if(agent.remainingDistance <= agent.stoppingDistance)
+        {
+            timeWaited++;
+            Debug.Log(timeWaited);
+            
+        }
+        else 
+        {
+            MoveCharacter();
+        }
+
+        if (timeWaited >= waitTime)
+        {
+            timeWaited = 0;
+            MoveCharacter();
+            Debug.Log("Time to Move");
+        }
+
+
     }
 
-    private IEnumerator MovementTiming()
+   private void MoveCharacter()
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            Debug.Log("Switch");
+            for (int time = 0; time < waitTime; time++)
+            {
+                Debug.Log("Bonnie Waiting");
+            }
+
             currentCameraIndex = (currentCameraIndex + 1) % cameraPositions.Length;
-            yield return new WaitForSeconds(waitTime);
+
             agent.SetDestination(cameraPositions[currentCameraIndex].position);
-            
+            Debug.Log(cameraPositions[currentCameraIndex].position);
+
+
         }
     }
+
+    
 
 }
