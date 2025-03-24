@@ -47,9 +47,9 @@ public class BonnieMovement : MonoBehaviour
             {
                 
                 MoveCharacter();
-                Debug.Log("Time to Move");
+                
             }
-            Debug.Log(moveChance);
+            
             
         }
 
@@ -60,9 +60,32 @@ public class BonnieMovement : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
+            int positionChance = Random.Range(0, 3);
+
+            if (currentCameraIndex == 5)
+            {
+                currentCameraIndex = cameraPositions.Length - 1;
+            }
+            else if (positionChance == 0 || positionChance == 1)
+            {
+                currentCameraIndex = (currentCameraIndex + 1) % cameraPositions.Length;
+            }
+            else
+            {
+                currentCameraIndex = (currentCameraIndex - 1) % cameraPositions.Length;
+            }
+
+
+
             
 
-            currentCameraIndex = (currentCameraIndex + 1) % cameraPositions.Length;
+            if (currentCameraIndex == -1)
+            {
+                currentCameraIndex = 0;
+            }
+
+
+            
 
             if (currentCameraIndex == cameraPositions.Length - 1)
             {
@@ -74,7 +97,7 @@ public class BonnieMovement : MonoBehaviour
             }
 
             agent.SetDestination(cameraPositions[currentCameraIndex].position);
-            Debug.Log(cameraPositions[currentCameraIndex].position);
+            
 
 
         }
