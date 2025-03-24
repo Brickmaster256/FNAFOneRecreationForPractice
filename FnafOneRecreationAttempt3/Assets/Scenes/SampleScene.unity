@@ -297,7 +297,9 @@ MonoBehaviour:
   - {fileID: 1178797997}
   - {fileID: 1440341697}
   - {fileID: 14941677}
-  waitTime: 4.98
+  waitTime: 4
+  aIValue: 10
+  Door: {fileID: 1484970582}
 --- !u!195 &282450326
 NavMeshAgent:
   m_ObjectHideFlags: 0
