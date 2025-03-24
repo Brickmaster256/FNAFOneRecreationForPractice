@@ -9,6 +9,8 @@ public class BonnieMovement : MonoBehaviour
     [SerializeField] private int waitTime = 5000;
     [SerializeField] private int aIValue = 10;
 
+    [SerializeField] private DoorMovementScript Door;
+
     private int timeWaited = 0;
     private int currentCameraIndex;
     private NavMeshAgent agent;
@@ -61,6 +63,15 @@ public class BonnieMovement : MonoBehaviour
             
 
             currentCameraIndex = (currentCameraIndex + 1) % cameraPositions.Length;
+
+            if (currentCameraIndex == cameraPositions.Length - 1)
+            {
+                if (!Door.GetIsDoorOpen())
+                {
+                    currentCameraIndex = cameraPositions.Length - 5;
+                }
+
+            }
 
             agent.SetDestination(cameraPositions[currentCameraIndex].position);
             Debug.Log(cameraPositions[currentCameraIndex].position);

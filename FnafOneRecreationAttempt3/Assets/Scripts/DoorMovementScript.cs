@@ -8,10 +8,10 @@ public class DoorMovementScript : MonoBehaviour
     [SerializeField] private Vector3 OpenPosition;
     [SerializeField] private Vector3 ClosePosition;
     private Transform thisTransform;
-    private bool isDoorOpen = true;
+    [SerializeField] private bool isDoorOpen = true;
     void Start()
     {
-        isDoorOpen = true;
+        isDoorOpen = false;
         UpdatePosition();
     }
 
