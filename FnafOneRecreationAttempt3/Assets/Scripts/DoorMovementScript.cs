@@ -8,7 +8,7 @@ public class DoorMovementScript : MonoBehaviour
     [SerializeField] private Vector3 OpenPosition;
     [SerializeField] private Vector3 ClosePosition;
     private Transform thisTransform;
-    public bool isDoorOpen = true;
+    private bool isDoorOpen = true;
     void Start()
     {
         isDoorOpen = true;
@@ -30,5 +30,10 @@ public class DoorMovementScript : MonoBehaviour
             isDoorOpen = true;
             transform.position = OpenPosition;
         }
+    }
+
+    public bool GetIsDoorOpen()
+    {
+        return isDoorOpen;
     }
 }
