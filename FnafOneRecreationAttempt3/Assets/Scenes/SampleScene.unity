@@ -359,7 +359,7 @@ MonoBehaviour:
   - {fileID: 1178797997}
   - {fileID: 1440341697}
   - {fileID: 14941677}
-  waitTime: 4
+  waitTime: 400
   aIValue: 10
   Door: {fileID: 1484970582}
 --- !u!195 &282450326
@@ -1913,7 +1913,7 @@ MonoBehaviour:
   - {fileID: 260215617}
   - {fileID: 2029761012}
   - {fileID: 880993890}
-  waitTime: 4
+  waitTime: 400
   aIValue: 10
   Door: {fileID: 2049527045}
 --- !u!195 &1493574560

@@ -77,6 +77,10 @@ public class BonnieMovement : MonoBehaviour
             else if (positionChance == 3)
             {
                 currentCameraIndex = (currentCameraIndex - 2) % cameraPositions.Length;
+                if (currentCameraIndex == cameraPositions.Length - 1)
+                {
+                    currentCameraIndex = cameraPositions.Length - 2;
+                }
             }
             else
             {
@@ -87,10 +91,11 @@ public class BonnieMovement : MonoBehaviour
 
             
 
-            if (currentCameraIndex < 0)
+            if (currentCameraIndex <= 0)
             {
-                currentCameraIndex = 0;
+                currentCameraIndex = 1;
             }
+            
 
 
             
