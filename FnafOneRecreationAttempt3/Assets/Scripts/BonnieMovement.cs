@@ -60,7 +60,7 @@ public class BonnieMovement : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            int positionChance = Random.Range(0, 3);
+            int positionChance = Random.Range(0, 5);
 
             if (currentCameraIndex == 5)
             {
@@ -69,6 +69,14 @@ public class BonnieMovement : MonoBehaviour
             else if (positionChance == 0 || positionChance == 1)
             {
                 currentCameraIndex = (currentCameraIndex + 1) % cameraPositions.Length;
+            }
+            else if (positionChance == 2)
+            {
+                currentCameraIndex = (currentCameraIndex + 2) % cameraPositions.Length;
+            }
+            else if (positionChance == 3)
+            {
+                currentCameraIndex = (currentCameraIndex - 2) % cameraPositions.Length;
             }
             else
             {
@@ -79,7 +87,7 @@ public class BonnieMovement : MonoBehaviour
 
             
 
-            if (currentCameraIndex == -1)
+            if (currentCameraIndex < 0)
             {
                 currentCameraIndex = 0;
             }
