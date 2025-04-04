@@ -40,6 +40,15 @@ public class CameraSwitchScripts : MonoBehaviour
             }
             
         }
+        else
+        {
+            cameraIndex = 0;
+            foreach(var camera in cameraList)
+            {
+                camera.enabled = false;
+            }
+            cameraList[0].enabled= true;
+        }
     }
 
     private void CycleThroughCameras()
@@ -48,7 +57,7 @@ public class CameraSwitchScripts : MonoBehaviour
         if (cameraIndex >= cameraList.Length) 
         {
             
-            cameraIndex = 0;
+            cameraIndex = 1;
         }
 
         foreach (var camera in cameraList)
