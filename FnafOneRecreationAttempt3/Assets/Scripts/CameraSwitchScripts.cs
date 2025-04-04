@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class CameraSwitchScripts : MonoBehaviour
 {
-    public Camera mainCam;
-    public Camera stageCam;
+    public Camera[] cameraList;
+    private bool isCycling = false;
     // Start is called before the first frame update
     void Start()
     {
-        mainCam.enabled = true;
-        stageCam.enabled = false;
+        
     }
 
     // Update is called once per frame
@@ -18,8 +17,17 @@ public class CameraSwitchScripts : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            mainCam.enabled = !mainCam.enabled;
-            stageCam.enabled = !stageCam.enabled;
+            isCycling = !isCycling;
+        }
+        if (isCycling)
+        {
+            CycleThroughCameras();
         }
     }
+
+    private void CycleThroughCameras()
+    {
+
+    }
+    
 }
