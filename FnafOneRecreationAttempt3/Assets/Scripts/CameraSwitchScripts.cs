@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class CameraSwitchScripts : MonoBehaviour
 {
-    public Camera mainCam;
-    public Camera stageCam;
+    public Camera[] cameraList;
+
+    [SerializeField] private int waitLimit = 100;
+
+    private bool isCycling = false;
+
+    private int waitTime = 0;
+    private int cameraIndex;
     // Start is called before the first frame update
     void Start()
     {
-        mainCam.enabled = true;
-        stageCam.enabled = false;
+        foreach(var camera in cameraList)
+        {
+            camera.enabled = false;
+        }
+        cameraList[0].enabled = true;
     }
 
     // Update is called once per frame
@@ -18,8 +27,44 @@ public class CameraSwitchScripts : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            mainCam.enabled = !mainCam.enabled;
-            stageCam.enabled = !stageCam.enabled;
+            
+            isCycling = !isCycling;
+        }
+        if (isCycling)
+        {
+            waitTime++;
+            if (waitTime >= waitLimit)
+            {
+                waitTime = 0;
+                CycleThroughCameras();
+            }
+            
+        }
+        else
+        {
+            cameraIndex = 0;
+            foreach(var camera in cameraList)
+            {
+                camera.enabled = false;
+            }
+            cameraList[0].enabled= true;
         }
     }
+
+    private void CycleThroughCameras()
+    {
+        cameraIndex += 1;
+        if (cameraIndex >= cameraList.Length) 
+        {
+            
+            cameraIndex = 1;
+        }
+
+        foreach (var camera in cameraList)
+        {
+            camera.enabled = false;
+        }
+        cameraList[cameraIndex].enabled = true;
+    }
+
 }

@@ -87,18 +87,10 @@ public class BonnieMovement : MonoBehaviour
                 currentCameraIndex = (currentCameraIndex - 1) % cameraPositions.Length;
             }
 
-
-
-            
-
             if (currentCameraIndex <= 0)
             {
                 currentCameraIndex = 1;
             }
-            
-
-
-            
 
             if (currentCameraIndex == cameraPositions.Length - 1)
             {
@@ -108,7 +100,6 @@ public class BonnieMovement : MonoBehaviour
                 }
 
             }
-
             agent.SetDestination(cameraPositions[currentCameraIndex].position);
             
 
