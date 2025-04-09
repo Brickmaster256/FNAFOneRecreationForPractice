@@ -67,4 +67,8 @@ public class CameraSwitchScripts : MonoBehaviour
         cameraList[cameraIndex].enabled = true;
     }
 
+    public Camera[] GetCameras()
+    {
+        return cameraList;
+    }
 }
