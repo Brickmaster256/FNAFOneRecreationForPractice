@@ -42,12 +42,7 @@ public class CameraSwitchScripts : MonoBehaviour
         }
         else
         {
-            cameraIndex = 0;
-            foreach(var camera in cameraList)
-            {
-                camera.enabled = false;
-            }
-            cameraList[0].enabled= true;
+            
         }
     }
 
@@ -79,8 +74,9 @@ public class CameraSwitchScripts : MonoBehaviour
             camera.enabled = false;
         }
     }
-    public void SetCamera(Camera currentCam)
+    public void SetCamera(int currentCam)
     {
-        currentCam.enabled = true;
+        cameraList[currentCam].enabled = true;
+        cameraIndex = currentCam;
     }
 }

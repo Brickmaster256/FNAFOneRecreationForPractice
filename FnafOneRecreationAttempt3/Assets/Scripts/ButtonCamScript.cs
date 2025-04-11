@@ -20,6 +20,6 @@ public class ButtonCamScript : MonoBehaviour
     public void UpdateCameras( Camera newCamera)
     {
         cameras.ClearCameras();
-        cameras.SetCamera(newCamera);
+       //cameras.SetCamera(newCamera);
     }
 }
