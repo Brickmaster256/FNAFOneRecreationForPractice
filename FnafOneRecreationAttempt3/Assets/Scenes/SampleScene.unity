@@ -2818,7 +2818,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 870819057}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &870819057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4289,6 +4301,7 @@ MonoBehaviour:
   - {fileID: 397061701}
   - {fileID: 1592519095}
   waitLimit: 100
+  camUI: {fileID: 1876358345}
 --- !u!1 &1568556250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5449,6 +5462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeCamUI: {fileID: 134217898}
   openCamUI: {fileID: 1497679851}
+  open: 0
 --- !u!1 &1895630715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5569,7 +5583,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1930314163}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1930314163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5692,26 +5718,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1932936675}
-        m_TargetAssemblyTypeName: ButtonCamScript, Assembly-CSharp
-        m_MethodName: UpdateCameras
-        m_Mode: 1
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonCamScript, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

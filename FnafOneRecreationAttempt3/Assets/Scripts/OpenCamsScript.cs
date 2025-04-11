@@ -7,10 +7,14 @@ public class OpenCamsScript : MonoBehaviour
 {
     [SerializeField] private GameObject closeCamUI;
     [SerializeField] private GameObject openCamUI;
+
+
+    public bool open; 
     void Start()
     {
         openCamUI.GetComponent<Canvas>().enabled = false;
         closeCamUI.GetComponent<Canvas>().enabled = true;
+        open = false;
     }
 
     
@@ -20,6 +24,8 @@ public class OpenCamsScript : MonoBehaviour
         {
             openCamUI.GetComponent<Canvas>().enabled = !openCamUI.GetComponent<Canvas>().enabled;
             closeCamUI.GetComponent<Canvas>().enabled = !closeCamUI.GetComponent<Canvas>().enabled;
+            open = !open;
+
         }
     }
 }

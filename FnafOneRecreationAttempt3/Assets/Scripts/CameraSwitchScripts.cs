@@ -6,9 +6,10 @@ public class CameraSwitchScripts : MonoBehaviour
 {
     public Camera[] cameraList;
 
-    [SerializeField] private int waitLimit = 100;
+    
+    [SerializeField] private OpenCamsScript camUI;
 
-    private bool isCycling = false;
+    
 
     private int waitTime = 0;
     private int cameraIndex;
@@ -25,7 +26,10 @@ public class CameraSwitchScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (camUI.open == false)
+        {
+            SetCamera(0);
+        }
     }
 
    
@@ -44,7 +48,8 @@ public class CameraSwitchScripts : MonoBehaviour
     }
     public void SetCamera(int currentCam)
     {
+        ClearCameras();
         cameraList[currentCam].enabled = true;
-        cameraIndex = currentCam;
+        
     }
 }
