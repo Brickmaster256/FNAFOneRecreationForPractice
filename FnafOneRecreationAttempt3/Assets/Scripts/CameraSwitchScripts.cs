@@ -25,42 +25,10 @@ public class CameraSwitchScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            isCycling = !isCycling;
-        }
-        if (isCycling)
-        {
-            waitTime++;
-            if (waitTime >= waitLimit)
-            {
-                waitTime = 0;
-                CycleThroughCameras();
-            }
-            
-        }
-        else
-        {
-            
-        }
+        
     }
 
-    private void CycleThroughCameras()
-    {
-        cameraIndex += 1;
-        if (cameraIndex >= cameraList.Length) 
-        {
-            
-            cameraIndex = 1;
-        }
-
-        foreach (var camera in cameraList)
-        {
-            camera.enabled = false;
-        }
-        cameraList[cameraIndex].enabled = true;
-    }
+   
 
     public Camera[] GetCameras()
     {
