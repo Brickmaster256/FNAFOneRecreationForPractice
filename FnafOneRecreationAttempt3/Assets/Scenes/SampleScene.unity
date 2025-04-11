@@ -371,7 +371,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 77753835}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &77753835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,7 +1629,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 363943380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &363943380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1852,7 +1876,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 496873008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &496873008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2326,7 +2362,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 693070057}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &693070057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3713,7 +3761,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1447404778}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1447404778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4300,7 +4360,6 @@ MonoBehaviour:
   - {fileID: 1658504775}
   - {fileID: 397061701}
   - {fileID: 1592519095}
-  waitLimit: 100
   camUI: {fileID: 1876358345}
 --- !u!1 &1568556250
 GameObject:
@@ -4550,7 +4609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1649401966}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1649401966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4671,7 +4742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1657186613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1657186613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6028,7 +6111,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2006941643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497679856}
+        m_TargetAssemblyTypeName: CameraSwitchScripts, Assembly-CSharp
+        m_MethodName: SetCamera
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2006941643
 MonoBehaviour:
   m_ObjectHideFlags: 0
