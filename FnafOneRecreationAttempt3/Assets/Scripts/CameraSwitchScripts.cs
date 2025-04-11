@@ -11,8 +11,9 @@ public class CameraSwitchScripts : MonoBehaviour
 
     
 
-    private int waitTime = 0;
+    
     private int cameraIndex;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,10 @@ public class CameraSwitchScripts : MonoBehaviour
         if (camUI.open == false)
         {
             SetCamera(0);
+        }
+        else
+        {
+            SetCamera(cameraIndex); 
         }
     }
 
@@ -51,5 +56,9 @@ public class CameraSwitchScripts : MonoBehaviour
         ClearCameras();
         cameraList[currentCam].enabled = true;
         
+        if (currentCam != 0)
+        {
+            cameraIndex = currentCam;
+        }
     }
 }
