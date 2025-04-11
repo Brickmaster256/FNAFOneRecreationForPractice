@@ -71,4 +71,16 @@ public class CameraSwitchScripts : MonoBehaviour
     {
         return cameraList;
     }
+    
+    public void ClearCameras()
+    {
+        foreach (var camera in cameraList)
+        {
+            camera.enabled = false;
+        }
+    }
+    public void SetCamera(Camera currentCam)
+    {
+        currentCam.enabled = true;
+    }
 }

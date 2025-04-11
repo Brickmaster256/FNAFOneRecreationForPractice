@@ -2037,6 +2037,7 @@ GameObject:
   - component: {fileID: 558208930}
   - component: {fileID: 558208929}
   - component: {fileID: 558208928}
+  - component: {fileID: 558208931}
   m_Layer: 5
   m_Name: LeftDoorOpenButton
   m_TagString: Untagged
@@ -2120,6 +2121,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 558208931}
+        m_TargetAssemblyTypeName: ButtonCamScript, Assembly-CSharp
+        m_MethodName: UpdateCameras
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1743019011}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Camera, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &558208929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,6 +2171,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558208926}
   m_CullTransparentMesh: 1
+--- !u!114 &558208931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558208926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324cbf9d7ad131049b009db3a98b65e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameras: {fileID: 1497679856}
 --- !u!1001 &647251979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5621,7 +5647,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932936670}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5.8}
   m_LocalScale: {x: 0.38250002, y: 0.775, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5690,6 +5716,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonCamScript, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1932936673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5710,7 +5748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5741,7 +5779,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameras: {fileID: 1497679856}
-  switchCam: {fileID: 1743019011}
 --- !u!1 &1942890961
 GameObject:
   m_ObjectHideFlags: 0

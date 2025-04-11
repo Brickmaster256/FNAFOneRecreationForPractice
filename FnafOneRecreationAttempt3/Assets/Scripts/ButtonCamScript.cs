@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonCamScript : MonoBehaviour
 {
     [SerializeField] private CameraSwitchScripts cameras;
-    [SerializeField] private Camera switchCam;
+    
     void Start()
     {
        
@@ -17,13 +17,9 @@ public class ButtonCamScript : MonoBehaviour
         
     }
 
-    public void UpdateCameras()
+    public void UpdateCameras( Camera newCamera)
     {
-        foreach (var camera in cameras.GetCameras())
-        {
-            camera.enabled = false;
-        }
-
-        switchCam.enabled = true;
+        cameras.ClearCameras();
+        cameras.SetCamera(newCamera);
     }
 }
