@@ -6,12 +6,14 @@ public class CameraSwitchScripts : MonoBehaviour
 {
     public Camera[] cameraList;
 
-    [SerializeField] private int waitLimit = 100;
+    
+    [SerializeField] private OpenCamsScript camUI;
 
-    private bool isCycling = false;
+    
 
-    private int waitTime = 0;
+    
     private int cameraIndex;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -25,46 +27,38 @@ public class CameraSwitchScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (camUI.open == false)
         {
-            
-            isCycling = !isCycling;
-        }
-        if (isCycling)
-        {
-            waitTime++;
-            if (waitTime >= waitLimit)
-            {
-                waitTime = 0;
-                CycleThroughCameras();
-            }
-            
+            SetCamera(0);
         }
         else
         {
-            cameraIndex = 0;
-            foreach(var camera in cameraList)
-            {
-                camera.enabled = false;
-            }
-            cameraList[0].enabled= true;
+            SetCamera(cameraIndex); 
         }
     }
 
-    private void CycleThroughCameras()
-    {
-        cameraIndex += 1;
-        if (cameraIndex >= cameraList.Length) 
-        {
-            
-            cameraIndex = 1;
-        }
+   
 
+    public Camera[] GetCameras()
+    {
+        return cameraList;
+    }
+    
+    public void ClearCameras()
+    {
         foreach (var camera in cameraList)
         {
             camera.enabled = false;
         }
-        cameraList[cameraIndex].enabled = true;
     }
-
+    public void SetCamera(int currentCam)
+    {
+        ClearCameras();
+        cameraList[currentCam].enabled = true;
+        
+        if (currentCam != 0)
+        {
+            cameraIndex = currentCam;
+        }
+    }
 }
