@@ -6525,6 +6525,7 @@ GameObject:
   - component: {fileID: 2100643119}
   - component: {fileID: 2100643121}
   - component: {fileID: 2100643120}
+  - component: {fileID: 2100643122}
   m_Layer: 5
   m_Name: Power
   m_TagString: Untagged
@@ -6648,6 +6649,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100643118}
   m_CullTransparentMesh: 1
+--- !u!114 &2100643122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100643118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d02e60dea2a2f408b3527974128539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerObj: {fileID: 11400000, guid: 711f1403738df6b41831018548757936, type: 2}
 --- !u!1 &2121788612
 GameObject:
   m_ObjectHideFlags: 0
