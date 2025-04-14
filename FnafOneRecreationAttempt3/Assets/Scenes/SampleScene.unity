@@ -1806,6 +1806,7 @@ GameObject:
   - component: {fileID: 444614542}
   - component: {fileID: 444614541}
   - component: {fileID: 444614540}
+  - component: {fileID: 444614544}
   m_Layer: 5
   m_Name: PowerCanvas
   m_TagString: Untagged
@@ -1896,6 +1897,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &444614544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444614539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509917b9d07449d4591c212810c20417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeCamUI: {fileID: 134217898}
+  openCamUI: {fileID: 1497679851}
+  open: 0
 --- !u!1 &496873005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,10 +2393,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acf7b592a0d07794b826ee0674087563, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1876358345}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf7b592a0d07794b826ee0674087563, type: 3}
 --- !u!1 &693070054
 GameObject:
@@ -4462,7 +4475,7 @@ MonoBehaviour:
   - {fileID: 1658504775}
   - {fileID: 397061701}
   - {fileID: 1592519095}
-  camUI: {fileID: 1876358345}
+  camUI: {fileID: 444614544}
 --- !u!1 &1568556250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5628,26 +5641,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860151480}
   m_CullTransparentMesh: 1
---- !u!1 &1876358343 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: acf7b592a0d07794b826ee0674087563, type: 3}
-  m_PrefabInstance: {fileID: 647251979}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1876358345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876358343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 509917b9d07449d4591c212810c20417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeCamUI: {fileID: 134217898}
-  openCamUI: {fileID: 1497679851}
-  open: 0
 --- !u!1 &1895630715
 GameObject:
   m_ObjectHideFlags: 0
