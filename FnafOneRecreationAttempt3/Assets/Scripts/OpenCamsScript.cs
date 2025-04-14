@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,10 +23,15 @@ public class OpenCamsScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            openCamUI.GetComponent<Canvas>().enabled = !openCamUI.GetComponent<Canvas>().enabled;
-            closeCamUI.GetComponent<Canvas>().enabled = !closeCamUI.GetComponent<Canvas>().enabled;
-            open = !open;
+            UpdateCamState();
 
         }
+    }
+
+    public void UpdateCamState()
+    {
+        openCamUI.GetComponent<Canvas>().enabled = !openCamUI.GetComponent<Canvas>().enabled;
+        closeCamUI.GetComponent<Canvas>().enabled = !closeCamUI.GetComponent<Canvas>().enabled;
+        open = !open;
     }
 }
